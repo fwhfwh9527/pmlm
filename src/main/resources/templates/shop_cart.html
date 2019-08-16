@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+</head>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<body>
+<div id="main">
+    <header th:include="head::header"></header>
+    <!-- End header-->
+    <div class="ogami-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a class="breadcrumb-link" href="index"> <i class="fas fa-home"></i>首页</a></li>
+                <li><a class="breadcrumb-link" href="shoplist">商品</a></li>
+                <li><a class="breadcrumb-link active" href="#">购物车</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End breadcrumb-->
+    <div class="order-step">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="order-step_block">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-4">
+                                <div class="step-block active">
+                                    <div class="step">
+                                        <h2>购物车</h2><span>01</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="step-block">
+                                    <div class="step">
+                                        <h2>收货地址</h2><span>02</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="step-block">
+                                    <div class="step">
+                                        <h2>订单完成</h2><span>03</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End order step-->
+    <div class="shopping-cart">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="product-table">
+                        <table class="table table-responsive">
+                            <colgroup>
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 30%">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 10%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="product-iamge" scope="col">商品</th>
+                                <th class="product-name" scope="col">商品名称</th>
+                                <th class="product-price" scope="col">价格</th>
+                                <th class="product-quantity" scope="col">数量</th>
+                                <th class="product-total" scope="col">总和</th>
+                                <th class="product-clear" scope="col">
+                                    <button class="no-round-btn"><i class="icon_close"></i></button>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="product-iamge">
+                                    <div class="img-wrapper"><img src="images/product/product03.png"
+                                                                  alt="product image"></div>
+                                </td>
+                                <td class="product-name">商品名称</td>
+                                <td class="product-price">价格$460.00</td>
+                                <td class="product-quantity">
+                                    <!--商品数量-->
+                                    <input class="quantity no-round-input" type="number" min="1" value="1">
+                                </td>
+                                <td class="product-total">单个商品总价格$460.00</td>
+                                <td class="product-clear">
+                                    <!--删除商品的按钮-->
+                                    <button class="no-round-btn"><i class="icon_close"></i></button>
+                                </td>
+                            </tr>
+
+                            <!--                    <tr>-->
+                            <!--                      <td class="product-iamge"> -->
+                            <!--                        <div class="img-wrapper"><img src="images/product/product05.png" alt="product image"></div>-->
+                            <!--                      </td>-->
+                            <!--                      <td class="product-name">Chrysanthemum</td>-->
+                            <!--                      <td class="product-price">$460.00</td>-->
+                            <!--                      <td class="product-quantity">-->
+                            <!--                        <input class="quantity no-round-input" type="number" min="1" value="2">-->
+                            <!--                      </td>-->
+                            <!--                      <td class="product-total">$920.00</td>-->
+                            <!--                      <td class="product-clear"> -->
+                            <!--                        <button class="no-round-btn"><i class="icon_close"></i></button>-->
+                            <!--                      </td>-->
+                            <!--                    </tr>-->
+                            </tbody>
+                        </table>
+                        <!--                <div class="col-12 text-left ">-->
+                        <!--                  <button class="normal-btn green-underline cart-update">结算</button>-->
+                        <!--                </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="cart-total_block">
+                        <h2>购物车总数</h2>
+                        <table class="table">
+                            <colgroup>
+                                <col span="1" style="width: 50%">
+                                <col span="1" style="width: 50%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>运输</th>
+                                <td>
+                                    <p>包邮</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>总价</th>
+                                <td>$169.00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="checkout-method">
+                            <a href="shop_checkout" style="color: #000;width: 350px">
+                                <button class="normal-btn">结算</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End shopping cart-->
+
+    <!-- End partner-->
+    <footer th:include="footer::footer"></footer>
+    <!-- End footer-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+</body>
+</html>

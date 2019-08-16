@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>帖子详情页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+</head>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<body>
+<div id="main">
+    <!--引入头部-->
+    <header th:include="head::header"></header>
+
+    <!-- End header-->
+    <div class="ogami-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a class="breadcrumb-link" href="index"> <i class="fas fa-home"></i>首页</a></li>
+                <li><a class="breadcrumb-link active" href="#">帖子详情</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End breadcrumb-->
+    <div class="blog-layout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="blog-sidebar">
+                        <button class="no-round-btn" id="filter-sidebar--closebtn">Close sidebar</button>
+                        <div class="blog-sidebar_search">
+                            <div class="search_block">
+                                <form action="" method="get">
+                                    <input class="no-round-input" type="text" placeholder="Search...">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar_categories">
+                            <div class="categories_top mini-tab-title underline">
+                                <h2 class="title">Categories</h2>
+                            </div>
+                            <div class="categories_bottom">
+                                <ul>
+                                    <!--根据某个品牌查询帖子-->
+                                    <li><a class="category-link" href="#">康师傅</a></li>
+                                    <li><a class="category-link" href="#">白象</a></li>
+                                    <li><a class="category-link" href="#">五谷道场</a></li>
+                                    <li><a class="category-link" href="#">日清</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar_recent-post">
+                            <div class="recent-post_top mini-tab-title underline">
+                                <h2 class="title">最近发帖</h2>
+                            </div>
+                            <div class="recent-post_bottom">
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/mini_blog_img_1.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar">Cook Dinner For 30
+                                        Minutes</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/mini_blog_img_2.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar">Tips for Growing your own
+                                        Organic</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/mini_blog_img_3.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar">The Personality Trait That
+                                        Makes..</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/mini_blog_img_4.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar">The Personality Trait That
+                                        Makes People</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-sidebar--background" style="display: none"></div>
+                </div>
+                <div class="col-12 col-xl-9">
+                    <div class="blog-detail">
+                        <div id="show-filter-sidebar">
+                            <h5><i class="fas fa-bars"></i>Show sidebar</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="blog-detail_block">
+                                    <h1 class="blog-title">帖子标题</h1>
+                                    <div class="blog-img"><img src="images/blog/list_img_1.png" alt="blog image"></div>
+                                    <p class="blog-describe">帖子内容。。Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat. Duis aute irure Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                        occaecat cupidatat non proident, sunt in.</p>
+                                </div>
+                                <div class="blog-detail_footer">
+                                    <div class="row align-items-sm-center">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="blog-sidebar_tags"><a class="tag-btn" href="#">点赞</a></div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 text-md-right">
+                                            <div class="blog-detail_share"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-detail_comment">
+                                    <div class="customer-reviews_block">
+                                        <h2 class="comment-title">4条评论</h2>
+                                        <div class="customer-review">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-3 col-lg-2">
+                                                    <div class="customer-review_left">
+                                                        <div class="customer-review_img text-center"><img
+                                                                class="img-fluid" src="images/shop/reviewer_01.png"
+                                                                alt="customer image"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-9 col-lg-10">
+                                                    <div class="customer-comment">
+                                                        <h5 class="comment-date">评论时间</h5>
+                                                        <h3 class="customer-name">评论人姓名</h3>
+                                                        <p class="customer-commented">评论内容, consectetur adipisicing
+                                                            elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                            magna alation uidem dolore eu fugiat nulla pariatur.</p>
+                                                        <button class="like-comment">点赞</button>
+                                                        <button class="reply-comment">回复</button>
+                                                        <div class="replied-comment">
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-3 col-lg-2">
+                                                                    <div class="customer-review_left">
+                                                                        <div class="customer-review_img text-center">
+                                                                            <img class="img-fluid"
+                                                                                 src="images/shop/reviewer_01.png"
+                                                                                 alt="customer image"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-9 col-lg-10">
+                                                                    <div class="customer-comment">
+                                                                        <h5 class="comment-date">27 Aug 2016</h5>
+                                                                        <h3 class="customer-name">Jenney Kelley</h3>
+                                                                        <p class="customer-commented">Lorem ipsum dolor
+                                                                            sit amet, consectetur adipisicing elit, sed
+                                                                            do eiusmod tempor incididunt ut labore et
+                                                                            dolore magna alation uidem dolore eu fugiat
+                                                                            nulla pariatur.</p>
+                                                                        <button class="like-comment">Like</button>
+                                                                        <button class="reply-comment">Reply</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="customer-review">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-3 col-lg-2">
+                                                    <div class="customer-review_left">
+                                                        <div class="customer-review_img text-center"><img
+                                                                class="img-fluid" src="images/shop/reviewer_02.png"
+                                                                alt="customer image"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-9 col-lg-10">
+                                                    <div class="customer-comment">
+                                                        <h5 class="comment-date">27 Aug 2016</h5>
+                                                        <h3 class="customer-name">Mike Phillips</h3>
+                                                        <p class="customer-commented">Lorem ipsum dolor sit amet,
+                                                            consectetur adipisicing elit, sed do eiusmod tempor
+                                                            incididunt ut labore et dolore magna alation uidem dolore eu
+                                                            fugiat nulla pariatur.</p>
+                                                        <button class="like-comment">Like</button>
+                                                        <button class="reply-comment">Reply</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="leave-reviews_block">
+                                        <h2 class="comment-title">留下你的评论</h2>
+                                        <form action="" method="post">
+                                            <textarea class="textarea-form" name="" cols="30" rows="8"
+                                                      placeholder="请输入内容......"></textarea>
+                                            <button class="normal-btn">评论</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End blog layout-->
+
+    <!-- End partner-->
+    <footer th:include="footer::footer"></footer>
+    <!-- End footer-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

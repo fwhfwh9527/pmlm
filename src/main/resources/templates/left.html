@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<div class="row" th:fragment="left">
+
+    <div class="col-xl-3">
+        <div class="blog-sidebar">
+            <button class="no-round-btn" id="filter-sidebar--closebtn">关闭侧边栏</button>
+            <div class="blog-sidebar_search">
+                <div class="search_block">
+                    <form action="" method="get">
+                        <input class="no-round-input" type="text" placeholder="Search...">
+                    </form>
+                </div>
+            </div>
+            <div class="blog-sidebar_categories">
+                <div class="categories_top mini-tab-title underline">
+                    <h2 class="title">类别</h2>
+                </div>
+                <div class="categories_bottom">
+                    <ul>
+                        <li><a class="category-link" href="shop_grid+list_3col">图片</a></li>
+                        <li><a class="category-link" href="shop_grid+list_3col">Nutrition Meal</a></li>
+                        <li><a class="category-link" href="shop_grid+list_3col">Organic Planting</a></li>
+                        <li><a class="category-link" href="shop_grid+list_3col">Recipes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--最近发表的文章-->
+            <div class="blog-sidebar_recent-post">
+                <div class="recent-post_top mini-tab-title underline">
+                    <h2 class="title">最近发表的文章</h2>
+                </div>
+                <div class="recent-post_bottom">
+                    <div class="mini-post_block">
+                        <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                src="images/blog/mini_blog_img_1.png" alt="blog image"></a></div>
+                        <div class="mini-post_text"><a href="blog_detail_sidebar">Cook Dinner For 30 Minutes</a>
+                            <h5>January 23, 2019</h5>
+                        </div>
+                    </div>
+                    <div class="mini-post_block">
+                        <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                src="images/blog/mini_blog_img_2.png" alt="blog image"></a></div>
+                        <div class="mini-post_text"><a href="blog_detail_sidebar.html">Tips for Growing your own
+                            Organic</a>
+                            <h5>January 23, 2019</h5>
+                        </div>
+                    </div>
+                    <div class="mini-post_block">
+                        <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                src="images/blog/mini_blog_img_3.png" alt="blog image"></a></div>
+                        <div class="mini-post_text"><a href="blog_detail_sidebar.html">The Personality Trait That
+                            Makes..</a>
+                            <h5>January 23, 2019</h5>
+                        </div>
+                    </div>
+                    <div class="mini-post_block">
+                        <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                src="images/blog/mini_blog_img_4.png" alt="blog image"></a></div>
+                        <div class="mini-post_text"><a href="blog_detail_sidebar.html">The Personality Trait That Makes
+                            People</a>
+                            <h5>January 23, 2019</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-sidebar_tags">
+                <div class="tags_top mini-tab-title underline">
+                    <h2 class="title">通过国家搜索</h2>
+                </div>
+                <div class="tags_bottom"><a class="tag-btn" href="shop_grid+list_3col">中国</a><a class="tag-btn"
+                                                                                                href="shop_grid+list_3col.html">日本</a><a
+                        class="tag-btn" href="shop_grid+list_3col.html">韩国</a><a class="tag-btn"
+                                                                                 href="shop_grid+list_3col">美国</a><a
+                        class="tag-btn" href="shop_grid+list_3col">朝鲜</a></div>
+            </div>
+        </div>
+        <div class="filter-sidebar--background" style="display: none"></div>
+    </div>
+</div>
+</html>

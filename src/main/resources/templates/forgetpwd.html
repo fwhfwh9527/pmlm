@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <meta charset="UTF-8">
+    <title>忘记密码</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+<body>
+<header th:include="head::header"></header>
+<div class="ogami-breadcrumb">
+    <div class="container">
+        <ul>
+            <li><a class="breadcrumb-link" href="index"> <i class="fas fa-home"></i>主页</a></li>
+            <li><a class="breadcrumb-link active" href="#">找回密码</a></li>
+        </ul>
+    </div>
+</div>
+<div class="account">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 mx-auto">
+                <h1 class="title">找回密码</h1>
+                <form>
+                    <label for="user-name">请输入手机号</label>
+                    <input class="no-round-input" id="user-name" type="text">
+                    <label for="password">输入新密码 *</label>
+                    <input class="no-round-input" id="password" type="text">
+                    <label for="confirm">确认新密码 *</label>
+                    <input class="no-round-input" id="confirm" type="text">
+                    <div class="account-function">
+                        <button class="no-round-btn">提交</button>
+                        <a class="create-account" href="register">注册账号</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:include="footer::footer"></footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+</html>

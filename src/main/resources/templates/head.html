@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:fragment="header">
+    <div class="header-block d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="header-left d-flex flex-column flex-md-row align-items-center">
+                        <p class="d-flex align-items-center"><i class="fas fa-envelope"></i>77777777@yeah.net</p>
+                        <p class="d-flex align-items-center"><i class="fas fa-phone"></i>+123456789</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="header-right d-flex flex-column flex-md-row justify-content-md-end justify-content-center align-items-center">
+                        <div class="social-link d-flex"><a href=""><i class="fab fa-facebook-f"> </i></a><a href=""><i
+                                class="fab fa-twitter"></i></a><a href=""><i class="fab fa-invision"> </i></a><a
+                                href=""><i class="fab fa-pinterest-p"> </i></a></div>
+                        <div class="language">
+                            <div class="selected-language">
+                                <ul class="list-language">
+                                    <li><img src="images/homepage01/usa.jpg" alt=""></li>
+                                    <li><img src="images/homepage01/usa.jpg" alt=""></li>
+                                    <li><img src="images/homepage01/usa.jpg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="login d-flex"><a href="login"><i class="fas fa-user"></i>登录</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navigation d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"><a class="logo" href="index"><img src="images/logo.png" alt=""></a></div>
+                <div class="col-8">
+                    <div class="navgition-menu d-flex align-items-center justify-content-center">
+                        <ul class="mb-0">
+                            <li class="toggleable"><a class="menu-item active" href="index">主页</a></li>
+                            <li class="toggleable"><a class="menu-item" href="shoplist">商店</a></li>
+                            <li class="toggleable"><a class="menu-item" href="blog_list_sidebar">论坛</a></li>
+                            <li class="toggleable"><a class="menu-item" href="shop_cart">购物车</a></li>
+                            <li class="toggleable"><a class="menu-item" href="about_us">关于我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="product-function d-flex align-items-center justify-content-end">
+                        <div id="wishlist"><a class="function-icon icon_heart_alt" href="#"></a></div>
+                        <div id="cart"><a class="function-icon icon_bag_alt"><span>金额￥:0.0</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="mobile-menu_block d-flex align-items-center"><a class="mobile-menu--control" href="#"><i
+                            class="fas fa-bars"></i></a>
+                        <div id="ogami-mobile-menu">
+                            <button class="no-round-btn" id="mobile-menu--closebtn">关闭菜单</button>
+                            <div class="mobile-menu_items">
+                                <ul class="mb-0 d-flex flex-column">
+                                    <li class="toggleable"><a class="menu-item active" href="index">首页</a><span
+                                            class="sub-menu--expander"><i class="icon_plus"></i></span>
+
+                                    </li>
+
+                                    <li class="toggleable"><a class="menu-item" href="blog_list_sidebar">Blog</a><span
+                                            class="sub-menu--expander"><i class="icon_plus"></i></span>
+
+                                    </li>
+                                    <li class="toggleable"><a class="menu-item" href="#">Pages</a><span
+                                            class="sub-menu--expander"><i class="icon_plus"></i></span>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-login">
+                                <h2>My account</h2><a href="login">主页</a><a href="register">注册</a>
+                            </div>
+                            <div class="mobile-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a href=""><i
+                                    class="fab fa-twitter"></i></a><a href=""><i class="fab fa-invision"> </i></a><a
+                                    href=""><i class="fab fa-pinterest-p"> </i></a></div>
+                        </div>
+                        <div class="ogamin-mobile-menu_bg"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mobile-menu_logo text-center d-flex justify-content-center align-items-center"><a
+                            href=""><img src="images/logo.png" alt=""></a></div>
+                </div>
+                <div class="col-3">
+                    <div class="mobile-product_function d-flex align-items-center justify-content-end"><a
+                            class="function-icon icon_heart_alt" href="wishlist"></a><a
+                            class="function-icon icon_bag_alt" href="shop_cart"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1">
+                    <div class="department-menu_block">
+                        <div class="department-menu d-flex justify-content-between align-items-center"><i
+                                class="fas fa-bars"></i>国家分类<span><i class="arrow_carrot-down"></i></span></div>
+                        <div class="department-dropdown-menu">
+                            <ul>
+                                <li><a href="#"> <i class="icon-1"></i>中国</a></li>
+                                <li><a href="#"> <i class="icon-2"></i>日本</a></li>
+                                <li><a href="#"> <i class="icon-3"></i>韩国</a></li>
+                                <li><a href="#"> <i class="icon-4"></i>朝鲜</a></li>
+                                <li><a href="#"> <i class="icon-5"></i>美国</a></li>
+                                <!--<li><a href="shop_grid+list_3col.html"><i class="icon-6"></i>Butter & Eggs</a></li>-->
+                                <!--<li><a href="shop_grid+list_3col.html"><i class="icon-7"></i>Fastfood</a></li>-->
+                                <!--<li><a href="shop_grid+list_3col.html"> <i class="icon-8"></i>Fresh Onion</a></li>-->
+                                <!--<li><a href="shop_grid+list_3col.html"> <i class="icon-9"></i>Papayaya & Crisps</a></li>-->
+                                <!--<li><a href="shop_grid+list_3col.html"><i class="icon-10"></i>Oatmeal</a></li>-->
+                                <!--<li><a href="shop_grid+list_3col.html"> <i class="icon-11"></i>Fresh Bananas</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-8 col-xl-9 order-1 order-md-2">
+                    <div class="website-search">
+                        <div class="row no-gutters">
+                            <div class="col-0 col-md-0 col-lg-4 col-xl-3">
+                                <div class="filter-search">
+                                    <div class="categories-select d-flex align-items-center justify-content-around">
+                                        <span>所有类别</span><i class="arrow_carrot-down"></i></div>
+                                    <div class="categories-select_box">
+                                        <ul>
+                                            <li>康师傅</li>
+                                            <li>白象</li>
+                                            <li>出前一丁</li>
+                                            <li>韩国泡面</li>
+                                            <li>日清</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 col-md-8 col-lg-5 col-xl-7">
+                                <div class="search-input">
+                                    <input class="no-round-input no-border" type="text" placeholder="请输入要查找的内容">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3 col-xl-2">
+                                <button class="no-round-btn">搜索</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</html>

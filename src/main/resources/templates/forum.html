@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+    <link rel="stylesheet" href="css/forum.css">
+    <title>发帖</title>
+</head>
+<body>
+<header th:include="head::header"></header>
+<html class="bbs-page">
+<body>
+<div class="bbsdoc" id="bbsdoc">
+    <div class="layout-lm clearfix" id="bd">
+        <div id="main">
+            <div id="BBS_BLOCK">
+                <table class="fatieArea">
+                    <colgroup>
+                        <col class="titleItem">
+                        <col class="item">
+                    </colgroup>
+                    <tbody style="margin-left: 200px">
+                    <tr>
+                        <td>标题：</td>
+                        <td><input class="bbsTitle fl" type="text" maxlength="34" bindcursor="true">
+                            <span class="fr">
+                    <select class="selectCompose">
+                        <option value="">选择分类</option>
+                    </select>
+                </span></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">内容：</td>
+                        <td id="textAreaWrap" style="position: relative;">
+                            <div class="editorToolBar" id="editorToolBar" style="width: 736px;">
+                                <span class="photo">图片</span>
+                            </div>
+                            <div style="width: 738px; height: 410px; position: relative;">
+                                <textarea class="textAreaContainer" id="textAreaContainer" bindcursor="true"
+                                          placeholder="请输入帖子内容......"></textarea>
+
+                            </div>
+                            <div class="ty_bbs_preview_area">
+
+                            </div>
+                            <div class="post-area-adv" id="post_area_adv" style="top: 195px;"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button class="normal-btn submit-btn "><a href="blog_list_sidebar"
+                                                          style="text-decoration: none">返回论坛</a></button>
+                <button class="normal-btn submit-btn float-right">发表帖子</button>
+            </div>
+            <div class="location clearfix">
+                <div class="text-side ads-loc-holder clearfix" data-ads-order="01">
+                    <a href="#" target="_blank"></a>
+                </div>
+
+            </div>
+            <script src="http://static.tianyaui.com/global/bbs/web/static/js/fatie1_d59c189.js"
+                    type="text/javascript"></script>
+
+
+        </div>
+    </div>
+</div>
+</body>
+<footer th:include="footer::footer"></footer>
+</html>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

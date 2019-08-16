@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<title>按类查找商品</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+</head>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<body>
+<div id="main">
+    <header th:include="head::header"></header>
+    <!-- End header-->
+    <div class="ogami-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a class="breadcrumb-link" href="index"> <i class="fas fa-home"></i>首页</a></li>
+                <li><a class="breadcrumb-link active" href="#">商品</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End breadcrumb-->
+    <div class="shop-layout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="shop-sidebar">
+                        <button class="no-round-btn" id="filter-sidebar--closebtn">关闭侧边栏</button>
+                        <div class="shop-sidebar_department">
+                            <div class="department_top mini-tab-title underline">
+                                <h2 class="title">按口味查询</h2>
+                            </div>
+                            <div class="department_bottom">
+                                <!-- 按照口味搜索-->
+                                <ul>
+                                    <li><a class="department-link" href="shoplist">酸辣味</a></li>
+                                    <li><a class="department-link" href="shoplist">麻辣味</a></li>
+                                    <li><a class="department-link" href="shoplist">香辣味</a></li>
+                                    <li><a class="department-link" href="shoplist">海鲜味</a></li>
+                                    <li><a class="department-link" href="shoplist">清淡味</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="shop-sidebar_tag">
+                            <div class="tag_top mini-tab-title underline">
+                                <h2 class="title">按照区域查询</h2>
+                            </div>
+                            \
+                            <div class="tags_bottom"><a class="tag-btn" href="#">中国</a><a class="tag-btn"
+                                                                                          href="#">日本</a><a
+                                    class="tag-btn" href="#">韩国</a><a class="tag-btn" href="#">美国</a><a class="tag-btn"
+                                                                                                        href="#">朝鲜</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-sidebar--background" style="display: none"></div>
+                </div>
+                <div class="col-xl-9">
+                    <div class="shop-grid-list">
+                        <div class="shop-products">
+                            <div class="shop-products_top mini-tab-title underline">
+                                <div class="row align-items-center">
+                                    <div class="col-6 col-xl-4">
+                                        <h2 class="title">品牌名称</h2>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <div id="show-filter-sidebar">
+                                            <h5><i class="fas fa-bars"></i>Show sidebar</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-8">
+                                        <div class="product-option">
+                                            <div class="view-method">
+                                                <p class="active" id="grid-view"><i class="fas fa-th-large"></i></p>
+                                                <p id="list-view"><i class="fas fa-list"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Using column-->
+                            </div>
+                            <div class="shop-products_bottom">
+                                <div class="row no-gutters-sm">
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail"><img
+                                                    src="images/product/product01.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product02.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product03.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product04.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product05.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product06.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product07.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product08.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="product">
+                                            <div class="product-img_block"><a class="product-img"
+                                                                              href="shop_detail.html"><img
+                                                    src="images/product/product09.png" alt=""></a>
+                                                <button class="quickview no-round-btn smooth">Quick view</button>
+                                            </div>
+                                            <div class="product-info_block">
+                                                <h5 class="product-type">Oranges</h5><a class="product-name"
+                                                                                        href="shop__detail.html">Pure
+                                                Pineapple</a>
+                                                <h3 class="product-price">$14.00
+                                                    <del>$35.00</del>
+                                                </h3>
+                                                <h5 class="product-rated"><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i class="icon_star"></i><i
+                                                        class="icon_star"></i><i
+                                                        class="icon_star-half"></i><span>(5)</span></h5>
+                                                <p class="product-describe">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor niam</p>
+                                                <h5 class="product-avaiable">Avability: <span>5 In stock</span></h5>
+                                                <button class="add-to-wishlist button-borderless"><i
+                                                        class="icon_heart_alt"></i></button>
+                                            </div>
+                                            <div class="product-select">
+                                                <button class="add-to-wishlist round-icon-btn"><i
+                                                        class="icon_heart_alt"></i></button>
+                                                <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                                </button>
+                                                <button class="add-to-compare round-icon-btn"><i
+                                                        class="fas fa-random"></i></button>
+                                                <button class="quickview round-icon-btn"><i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-select_list">
+                                                <p class="delivery-status">Free delivery</p>
+                                                <h3 class="product-price">
+                                                    <del>$35.00</del>
+                                                    $14.00
+                                                </h3>
+                                                <button class="add-to-cart normal-btn outline">Add to Cart</button>
+                                                <button class="add-to-compare normal-btn outline">+ Add to Compare
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-pagination">
+                                    <ul>
+                                        <li>
+                                            <button class="no-round-btn smooth active">1</button>
+                                        </li>
+                                        <li>
+                                            <button class="no-round-btn smooth">2</button>
+                                        </li>
+                                        <li>
+                                            <button class="no-round-btn smooth">3</button>
+                                        </li>
+                                        <li>
+                                            <button class="no-round-btn smooth"><i class="arrow_carrot-2right"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End partner-->
+    <footer th:include="footer::footer"></footer>
+    <!-- End footer-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+
+</body>
+</html>

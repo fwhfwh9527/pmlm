@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+</head>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<body>
+<div id="main">
+
+    <header th:include="head::header"></header>
+    <!-- End header-->
+    <div class="ogami-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a class="breadcrumb-link" href="index"> <i class="fas fa-home"></i>首页</a></li>
+                <li><a class="breadcrumb-link" href="shoplist">商品</a></li>
+                <li><a class="breadcrumb-link active" href="#">购物车</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End breadcrumb-->
+    <div class="order-step">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="order-step_block">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-4">
+                                <a href="shop_cart" style="text-decoration: none;">
+                                    <div class="step-block step-block--1" id="div2">
+                                        <div class="step">
+                                            <h2>购物车</h2><span>01</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-4 ">
+                                <div class="step-block active">
+                                    <div class="step">
+                                        <h2>收货地址</h2><span>02</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="step-block">
+                                    <div class="step">
+                                        <h2>订单已完成</h2><span>03</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End order step-->
+    <div class="shop-checkout">
+        <div class="container">
+            <form action="" method="post">
+                <div class="row">
+
+                    <div class="col-12 col-lg-8 selectaddress">
+                        <div class="form-group">
+                            <input type="radio" name="address"><a>姓名:***</a><a>手机号:***</a><br>地址：<span>河南省收水电费即可拉伸解放路建档立卡三方</span></input>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="address"><a>姓名:***</a><a>手机号:***</a><br>地址：<span>河南省收水电费即可拉伸解放路建档立卡三方</span></input>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="address"><a>姓名:***</a><a>手机号:***</a><br>地址：<span>河南省收水电费即可拉伸解放路建档立卡三方</span></input>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="address"><a>姓名:***</a><a>手机号:***</a><br>地址：<span>河南省收水电费即可拉伸解放路建档立卡三方</span></input>
+                        </div>
+                        <button class="normal-btn" onclick="addaddress()">新加地址</button>
+                    </div>
+
+
+                    <div class="col-12 col-lg-8 addaddres">
+                        <h2 class="form-title">地址填写</h2>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">收货人姓名</label>
+                                <input class="no-round-input-bg" id="inputFirstName" type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCity">省份/市区</label>
+                            <input class="no-round-input-bg" id="inputCity" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="detailAddress">详细地址</label>
+                            <input class="no-round-input-bg" id="detailAddress" name="" cols="30" rows="7">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone">电话</label>
+                            <input class="no-round-input-bg" id="inputPhone" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputNote">订单备注</label>
+                            <textarea class="textarea-form-bg" id="inputNote" name="" cols="30" rows="7"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h2 class="form-title">你的订单</h2>
+                        <div class="shopping-cart">
+                            <div class="cart-total_block">
+                                <table class="table">
+                                    <colgroup>
+                                        <col span="1" style="width: 50%">
+                                        <col span="1" style="width: 50%">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>小计</th>
+                                        <td>$169.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>运输</th>
+                                        <td>
+                                            <p>包邮</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>总价</th>
+                                        <td>$169.00</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--                  <div class="form-group">-->
+                            <!--                    <input type="radio" name="paymethod" id="shipping" value="option1" checked>-->
+                            <!--                    <label for="shipping">Cash on delivery</label>-->
+                            <!--                  </div>-->
+                            <!--                  <div class="form-group">-->
+                            <!--                    <input type="radio" name="paymethod" id="paypal" value="option2">-->
+                            <!--                    <label for="paypal">Paypal</label>-->
+                            <!--                  </div>-->
+                            <button class="normal-btn submit-btn">付款</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- End partner-->
+    <footer th:include="footer::footer"></footer>
+    <!-- End footer-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        var order = $(".point li a").index(this);//点击之后可以返回当前a标签index的值
+        $(".addaddres").hide();
+    })
+
+    function addaddress() {
+        $(".selectaddress").hide();
+        $(".addaddres").show();
+    }
+
+    $("#div2").hover(function () {
+        $("#div2").addClass("active");
+    }, function () {
+        $("#div2").removeClass("active");
+    })
+
+
+</script>
+</body>
+</html>

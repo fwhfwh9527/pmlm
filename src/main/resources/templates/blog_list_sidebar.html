@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>论坛页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+</head>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<body>
+<div id="main">
+    <header th:include="head::header"></header>
+    <!-- End header-->
+    <div class="ogami-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a class="breadcrumb-link" href="index"> <i class="fas fa-home"></i>首页</a></li>
+                <li><a class="breadcrumb-link active" href="#">论坛列表栏</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End breadcrumb-->
+    <div class="blog-layout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="blog-sidebar">
+                        <button class="no-round-btn" id="filter-sidebar--closebtn">关闭侧边栏</button>
+                        <div class="blog-sidebar_search">
+                            <div class="search_block">
+                                <form action="" method="get">
+                                    <input class="no-round-input" type="text" placeholder="Search...">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar_categories">
+                            <div class="categories_top mini-tab-title underline">
+                                <h2 class="title">根据品牌查询</h2>
+                            </div>
+                            <div class="categories_bottom">
+                                <ul>
+                                    <li><a class="category-link" href="#">康师傅</a></li>
+                                    <li><a class="category-link" href="#">白象</a></li>
+                                    <li><a class="category-link" href="#">日清</a></li>
+                                    <li><a class="category-link" href="#">五谷道场</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--最近发表的文章-->
+                        <div class="blog-sidebar_recent-post">
+                            <div class="recent-post_top mini-tab-title underline">
+                                <h2 class="title">最近发表的文章</h2>
+                            </div>
+                            <div class="recent-post_bottom">
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/mini_blog_img_1.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar">标题</a>
+                                        <h5>时间</h5>
+                                    </div>
+                                </div>
+
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/mini_blog_img_4.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar">The Personality Trait That
+                                        Makes People</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="filter-sidebar--background" style="display: none"></div>
+                </div>
+                <div class="col-12 col-xl-9">
+                    <div class="blog-list">
+                        <div id="show-filter-sidebar">
+                            <h5><i class="fas fa-bars"></i>显示栏</h5>
+                        </div>
+                        <button class="no-round-btn" id="fatie" style="margin-bottom: 50px;"><a href="forum"
+                                                                                                style="text-decoration: none">我要发帖</a>
+                        </button>
+                        <!--帖子大概浏览处-->
+                        <div class="blog-block">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="blog-img"><a href="blog_detail_sidebar"><img
+                                            src="images/blog/list_img_1.png" alt="blog image"></a></div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="blog-text">
+                                        <h5 class="blog-tag">分类</h5><br>
+                                        <a class="blog-title" href="blog_detail_sidebar">标题标题标题标题标题标题标题</a>
+                                        <div class="blog-credit">
+                                            <p class="credit date">时间</p>
+                                            <p class="credit comment">评论数</p>
+                                        </div>
+                                        <p class="blog-describe">帖子内容sssssssss</p><a class="blog-readmore"
+                                                                                     href="blog_detail_sidebar">阅读更多<span> <i
+                                            class="arrow_carrot-2right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--                <div class="blog-block">-->
+                        <!--                  <div class="row">-->
+                        <!--                    <div class="col-5">-->
+                        <!--                      <div class="blog-img"><a href="blog_detail_sidebar"><img src="images/blog/list_img_4.png" alt="blog image"></a></div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="col-7">-->
+                        <!--                      <div class="blog-text">-->
+                        <!--                        <h5 class="blog-tag">Green</h5><a class="blog-title" href="blog_detail_sidebar">The Personality Trait That Makes People Happier</a>-->
+                        <!--                        <div class="blog-credit">-->
+                        <!--                          <p class="credit date">May 19, 2017</p>-->
+                        <!--                          <p class="credit comment">3 Comment</p>-->
+                        <!--                        </div>-->
+                        <!--                        <p class="blog-describe">Tiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ullam</p><a class="blog-readmore" href="blog_detail_sidebar.html">Read More<span> <i class="arrow_carrot-2right"></i></span></a>-->
+                        <!--                      </div>-->
+                        <!--                    </div>-->
+                        <!--                  </div>-->
+                        <!--                </div>-->
+                    </div>
+                    <!-- 分页暂时注释 -->
+                    <!--              <div class="blog-pagination">-->
+                    <!--                <ul>-->
+                    <!--                  <li>-->
+                    <!--                    <button class="no-round-btn smooth active">1</button>-->
+                    <!--                  </li>-->
+                    <!--                  <li>-->
+                    <!--                    <button class="no-round-btn smooth">2</button>-->
+                    <!--                  </li>-->
+                    <!--                  <li>-->
+                    <!--                    <button class="no-round-btn smooth">3</button>-->
+                    <!--                  </li>-->
+                    <!--                  <li>-->
+                    <!--                    <button class="no-round-btn smooth"> <i class="arrow_carrot-2right"></i></button>-->
+                    <!--                  </li>-->
+                    <!--                </ul>-->
+                    <!--              </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End partner-->
+    <footer th:include="footer::footer"></footer>
+    <!-- End footer-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

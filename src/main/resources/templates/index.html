@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords"
+          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
+    <meta name="author" content="MARTECH | Deer Creative Theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/shortcut_logo.png">
+</head>
+<body>
+
+<div id="main">
+    <!--引入头部-->
+    <header th:include="head::header"></header>
+    <div class="slider">
+        <div class="full-fluid">
+            <div class="slider_wrapper">
+                <div class="slider-block" style="background-image: url('images/homepage01/slider_background_1.png')">
+                    <div class="slider-content">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-12 col-md-5 col-xl-6">
+                                    <div class="slider-text d-flex flex-column align-items-center align-items-md-start">
+                                        <h5 data-animation="fadeInUp" data-delay=".2s">康师傅</h5>
+                                        <h1 data-animation="fadeInUp" data-delay=".3s">豚骨拉面</h1>
+                                        <h3 data-animation="fadeInUp" data-delay=".4s">$14.00<span>/ 好吃不贵</span></h3><a
+                                            class="normal-btn" href="shop_detail" data-animation="fadeInUp"
+                                            data-delay=".4s">去看看</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="slider-img" data-animation="zoomIn" data-delay=".1s"><img
+                                            src="images/homepage01/slider_subbackground_1.png" alt="">
+                                        <div class="prallax-img">
+                                            <div id="img-block"><img class="img" src="images/pinpai/tungu.png" alt=""
+                                                                     data-depth="1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="benefit-block">
+                <div class="container">
+                    <div class="our-benefits">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="benefit-detail d-flex flex-column align-items-center"><img
+                                        class="benefit-img" src="images/homepage01/benefit-icon1.png" alt="">
+                                    <h5 class="benefit-title">免费送货</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="benefit-detail d-flex flex-column align-items-center"><img
+                                        class="benefit-img" src="images/homepage01/benefit-icon2.png" alt="">
+                                    <h5 class="benefit-title">准时送达</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="benefit-detail boderless d-flex flex-column align-items-center"><img
+                                        class="benefit-img" src="images/homepage01/benefit-icon3.png" alt="">
+                                    <h5 class="benefit-title" style="margin-top: 5px">安全支付</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End slider-->
+    <div class="items-category">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3"><a class="product-item d-flex flex-column align-items-center "
+                                                         href="shoplist">
+                    <div class="categories-img"><img src="images/pinpai/kangshifu.png" alt="康师傅"></div>
+                    <h2>康师傅</h2>
+                    <p>4 Items</p></a></div>
+                <div class="col-12 col-sm-6 col-md-3"><a class="product-item d-flex flex-column align-items-center "
+                                                         href="shoplist">
+                    <div class="categories-img"><img src="images/pinpai/baixiang.png" alt="白象"></div>
+                    <h2>白象</h2>
+                    <p>4 Items</p></a></div>
+                <div class="col-12 col-sm-6 col-md-3"><a
+                        class="product-item d-flex flex-column align-items-center justify-content-center"
+                        href="shoplist">
+                    <div class="categories-img"><img src="images/pinpai/riqing.png" alt="日清"></div>
+                    <h2>日清</h2>
+                    <p>4 Items</p></a></div>
+                <div class="col-12 col-sm-6 col-md-3"><a
+                        class="product-item d-flex flex-column align-items-center justify-content-center"
+                        href="shoplist">
+                    <div class="categories-img"><img src="images/pinpai/wugu.png" alt="五谷道场"></div>
+                    <h2>五谷道场</h2>
+                    <p>4 Items</p></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- End items-category-->
+    <div class="feature-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="title mx-auto">推荐商品</h1>
+                </div>
+                <div class="col-12">
+                    <div id="tab">
+                        <div id="tab-5">
+                            <div class="row no-gutters-sm">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/jiangzhi.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">上瘾浓郁酱汁(日清)</h3>
+                                        <h3 class="product-price">$14.00
+                                            <del>$35.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/tianfu.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">日清兵卫天妇罗虾味拉面</h3>
+                                        <h3 class="product-price">$14.00
+                                            <del>$35.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/tunguxiaozhu.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">OYATSU-豚骨小猪泡面</h3>
+                                        <h3 class="product-price">$30.00
+                                            <del>$45.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/tunzi.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">豚汁乌龙面(东洋水产)</h3>
+                                        <h3 class="product-price">$14.00
+                                            <del>$35.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/wantai.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">Marutai·丸泰鹿儿岛风味泡面</h3>
+                                        <h3 class="product-price">$14.00
+                                            <del>$35.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/wulong.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">Don兵卫 咖哩乌龙面(日清)</h3>
+                                        <h3 class="product-price">$14.00
+                                            <del>$35.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/yuci.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name"> 高级鱼翅汤口味(日清)</h3>
+                                        <h3 class="product-price">$30.00
+                                            <del>$45.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="product"><a class="product-img" href="shop_detail"><img
+                                            src="images/product/tunzi.png" alt=""></a>
+                                        <h5 class="product-type">日清</h5>
+                                        <h3 class="product-name">Atsu atsu豚汁乌龙面(东洋水产)</h3>
+                                        <h3 class="product-price">$14.00
+                                            <del>$35.00</del>
+                                        </h3>
+                                        <div class="product-select">
+                                            <button class="add-to-wishlist round-icon-btn"><i
+                                                    class="icon_heart_alt"></i></button>
+                                            <button class="add-to-cart round-icon-btn"><i class="icon_bag_alt"></i>
+                                            </button>
+                                            <button class="quickview round-icon-btn"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End feature-products-->
+    <div class="banner">
+        <div class="full-fluid">
+            <div class="banner-block">
+                <div class="row no-gutters">
+                    <div class="col-12 col-lg-3">
+                        <div class="banner-block_detail"
+                             style="background-image: url('images/homepage01/banner_1.png')"><img
+                                src="images/pinpai/kangshifu.png" alt=""><a class="banner-btn normal-btn"
+                                                                            href="shoplist">去看看</a></div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="banner-block_detail"
+                             style="background-image: url('images/homepage01/banner_2.png')"><img
+                                src="images/pinpai/wugu.png" alt=""><a class="banner-btn normal-btn"
+                                                                       href="shoplist">去看看</a></div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="banner-block_detail"
+                             style="background-image: url('images/homepage01/banner_3.png')"><img
+                                src="images/pinpai/riqing.png" alt=""><a class="banner-btn normal-btn" href="shoplist">去看看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End partner引入底部-->
+    <footer th:include="footer::footer"></footer>
+    <!-- End footer-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/numscroller-1.0.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var sence = document.getElementById('img-block')
+    var parallaxInstance = new Parallax(sence, {
+        hoverOnly: true,
+    });
+
+
+</script>
+</body>
+</html>

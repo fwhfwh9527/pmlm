@@ -1,0 +1,335 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    auto: 0;
+}
+
+#main {
+    padding: 10px 0;
+    float: left;
+    _margin-left: 0;
+}
+
+.layout-lm #main {
+    width: 830px;
+}
+
+#bbsdoc #main {
+    float: left;
+    padding: 0 0 7px;
+    _overflow: hidden;
+    _margin-left: 0;
+}
+
+#bbsdoc .layout-lm #main {
+    width: 860px;
+}
+
+.clearfix, .cf {
+    zoom: 1;
+}
+
+#bbsdoc #bd {
+    border-bottom: 0;
+}
+
+#bbsdoc {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 7px;
+}
+
+body {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+}
+
+body {
+    background: #f8f8f8;
+}
+
+html {
+    color: #000;
+}
+
+html {
+    _background-image: url(about:blank);
+    _background-attachment: fixed;
+}
+
+.bbs-page {
+    overflow-x: hidden;
+}
+
+.location {
+    height: 28px;
+    overflow: hidden;
+}
+
+.location .text {
+    float: left;
+    font-size: 14px;
+    line-height: 28px;
+    margin-right: 10px;
+}
+
+.location .text-side {
+    float: right;
+    font-size: 14px;
+    line-height: 28px;
+    margin: 0 68px -5px 0;
+}
+
+.fatieArea {
+    width: 796px;
+    border: 0;
+    margin-top: 10px;
+}
+
+.fatieArea tr td {
+    padding-bottom: 12px;
+    font-size: 14px;
+}
+
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+l {
+    float: left;
+    display: inline;
+}
+
+.fr {
+    float: right;
+    display: inline;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.hrefgonyue, .hrefgonyue:hover {
+    color: #8a8a8a;
+    text-decoration: underline;
+}
+
+.editorToolBar {
+    height: 20px;
+    border: 1px solid #d5dadf;
+    background: #f7f7f7;
+    padding: 8px 0;
+}
+
+#editorToolBar {
+    width: 100%;
+}
+
+#BBS_BLOCK #editorToolBar, #bbsPost #editorToolBar {
+    border-bottom: 0;
+}
+
+.post-area-adv {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.post-area-adv a {
+    color: #8a8a8a;
+}
+
+textarea {
+    resize: none;
+}
+
+.textAreaContainer {
+    width: 100%;
+    border: 1px solid #D5DADF;
+    font-size: 16px;
+}
+
+#textAreaContainer {
+    height: 245px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#BBS_BLOCK .textAreaContainer {
+    height: 400px;
+    width: 728px;
+}
+
+#BBS_BLOCK .textAreaContainer, #bbsPost .textAreaContainer {
+    font-family: "Microsoft YaHei";
+    *position: relative;
+    *margin-top: -1px;
+    padding: 4px;
+}
+
+.TY-ui-draft {
+    position: absolute;
+    z-index: 100;
+    background: #f8f8f8;
+    font: 12px/20px "宋体";
+    border: 1px solid #d5dadf;
+    padding: 10px;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+}
+
+.TY-ui-draft .help-box {
+    display: none;
+}
+
+.help-box .hd {
+    border-bottom: 1px dashed #8a8a8a;
+    line-height: 24px;
+}
+
+.help-box .bd .help-list {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tr {
+    text-align: right;
+}
+
+.help-box .bd p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.help-box .bd .help-list dt, .help-box .bd .help-list dd {
+    padding: 8px 0;
+    border-bottom: 1px dashed #8a8a8a;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.help-box .hd .toggle-draft-box {
+    float: right;
+    display: inline;
+    color: #000;
+    padding-right: 20px;
+    background: url(http://static.tianyaui.com/global/ty/resources/images/draft_icons_11bb472.png?v=@TIMESTAMP@) right -47px no-repeat;
+    text-decoration: none;
+}
+
+.draft-box .hd {
+    border-bottom: 1px dashed #8a8a8a;
+    line-height: 24px;
+}
+
+.draft-box .bd .draft-list {
+    padding-bottom: 10px;
+}
+
+.draft-box .hd h4 {
+    float: left;
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.draft-box .hd .toggle-help-box {
+    float: right;
+    display: inline;
+    color: #000;
+    padding-right: 20px;
+    background: url(http://static.tianyaui.com/global/ty/resources/images/draft_icons_11bb472.png?v=@TIMESTAMP@) right -22px no-repeat;
+    text-decoration: none;
+}
+
+.draft-box .hd h4 .remain-num {
+    color: #fd8d15;
+    margin: 0 5px;
+}
+
+.editorToolBar span {
+    float: left;
+    display: inline;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    padding-left: 25px;
+    margin: 0 6px;
+    background: url(http://static.tianyaui.com/global/ty/resources/images/bbs-post-icons_1890a34.png?v=@TIMESTAMP@) no-repeat;
+    position: relative;
+    *zoom: 1;
+}
+
+.editorToolBar span.friend {
+    padding-left: 22px;
+    background-position: 0 1px;
+}
+
+.editorToolBar span.photo {
+    background-position: 0 -37px;
+}
+
+.editorToolBar span.emotion {
+    padding-left: 22px;
+    background-position: 0 -110px;
+}
+
+.editorToolBar span.video {
+    background-position: 0 -147px;
+}
+
+.editorToolBar span.vote {
+    padding-left: 22px;
+    background-position: 0 -222px;
+}
+
+.editorToolBar span.draft {
+    float: right;
+    background-position: 0 -258px;
+}
+
+.fatieArea .bbsTitle {
+    padding: 5px 0;
+    vertical-align: bottom;
+    width: 80%;
+    border: 1px solid #d5dadf;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    _height: 20px;
+}
+
+.selectCompose {
+    width: 134px;
+    height: 26px;
+    border: 1px solid #d5dadf;
+    vertical-align: middle;
+    height: 22px \9;
+    line-height: 22px \9;
+}
+
+.titleItem {
+    width: 50px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.item {
+    text-align: left;
+    vertical-align: middle;
+}
