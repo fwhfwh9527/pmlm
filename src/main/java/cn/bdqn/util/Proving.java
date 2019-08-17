@@ -24,7 +24,7 @@ public class Proving {
     //短信模板
     private String templateCode = "SMS_172601017";
     /**
-     * 发送短信验证码方法
+     * 发送短信验证码方法xxx
      * 调用本方法后再调用getRadonNumber才可以获得验证码
      * @param phone 要发送的手机号
      * @return true发送成功 false发送失败
