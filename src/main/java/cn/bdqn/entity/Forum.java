@@ -1,97 +1,129 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import java.time.LocalDate;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Forum {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Forum implements Serializable {
 
-  private long fId;           //主键
-  private long uId;     //用户id
-  private String fHeadLine;     //标题
-  private java.sql.Date fDate;      //时间
-  private String fContent;      //内容
-  private long fNice;     //点赞数
-  private long sId;     //商品外键
-  private long bId;     //品牌外键
-  private long fNumber;     //评论数
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "fId", type = IdType.AUTO)
+    private Integer fId;
 
-  public long getFId() {
-    return fId;
-  }
+    @TableField("uId")
+    private Integer uId;
 
-  public void setFId(long fId) {
-    this.fId = fId;
-  }
+    @TableField("fHeadLine")
+    private String fHeadLine;
 
+    @TableField("fDate")
+    private LocalDate fDate;
 
-  public long getUId() {
-    return uId;
-  }
+    @TableField("fContent")
+    private String fContent;
 
-  public void setUId(long uId) {
-    this.uId = uId;
-  }
+    @TableField("fNice")
+    private Integer fNice;
 
+    @TableField("sId")
+    private Integer sId;
 
-  public String getFHeadLine() {
-    return fHeadLine;
-  }
+    @TableField("bId")
+    private Integer bId;
 
-  public void setFHeadLine(String fHeadLine) {
-    this.fHeadLine = fHeadLine;
-  }
+    @TableField("fNumber")
+    private Integer fNumber;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public java.sql.Date getFDate() {
-    return fDate;
-  }
+    public Integer getfId() {
+        return fId;
+    }
 
-  public void setFDate(java.sql.Date fDate) {
-    this.fDate = fDate;
-  }
+    public void setfId(Integer fId) {
+        this.fId = fId;
+    }
 
+    public Integer getuId() {
+        return uId;
+    }
 
-  public String getFContent() {
-    return fContent;
-  }
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
 
-  public void setFContent(String fContent) {
-    this.fContent = fContent;
-  }
+    public String getfHeadLine() {
+        return fHeadLine;
+    }
 
+    public void setfHeadLine(String fHeadLine) {
+        this.fHeadLine = fHeadLine;
+    }
 
-  public long getFNice() {
-    return fNice;
-  }
+    public LocalDate getfDate() {
+        return fDate;
+    }
 
-  public void setFNice(long fNice) {
-    this.fNice = fNice;
-  }
+    public void setfDate(LocalDate fDate) {
+        this.fDate = fDate;
+    }
 
+    public String getfContent() {
+        return fContent;
+    }
 
-  public long getSId() {
-    return sId;
-  }
+    public void setfContent(String fContent) {
+        this.fContent = fContent;
+    }
 
-  public void setSId(long sId) {
-    this.sId = sId;
-  }
+    public Integer getfNice() {
+        return fNice;
+    }
 
+    public void setfNice(Integer fNice) {
+        this.fNice = fNice;
+    }
 
-  public long getBId() {
-    return bId;
-  }
+    public Integer getsId() {
+        return sId;
+    }
 
-  public void setBId(long bId) {
-    this.bId = bId;
-  }
+    public void setsId(Integer sId) {
+        this.sId = sId;
+    }
 
+    public Integer getbId() {
+        return bId;
+    }
 
-  public long getFNumber() {
-    return fNumber;
-  }
+    public void setbId(Integer bId) {
+        this.bId = bId;
+    }
 
-  public void setFNumber(long fNumber) {
-    this.fNumber = fNumber;
-  }
+    public Integer getfNumber() {
+        return fNumber;
+    }
 
+    public void setfNumber(Integer fNumber) {
+        this.fNumber = fNumber;
+    }
 }

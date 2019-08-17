@@ -1,37 +1,62 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Taste {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Taste implements Serializable {
 
-  private long tid;         //主键
-  private String tName;   //口味
-  private long tState;    //状态
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "tid", type = IdType.AUTO)
+    private Integer tid;
 
-  public long getTid() {
-    return tid;
-  }
+    @TableField("tName")
+    private String tName;
 
-  public void setTid(long tid) {
-    this.tid = tid;
-  }
+    @TableField("tState")
+    private Integer tState;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public String getTName() {
-    return tName;
-  }
+    public Integer getTid() {
+        return tid;
+    }
 
-  public void setTName(String tName) {
-    this.tName = tName;
-  }
+    public void setTid(Integer tid) {
+        this.tid = tid;
+    }
 
+    public String gettName() {
+        return tName;
+    }
 
-  public long getTState() {
-    return tState;
-  }
+    public void settName(String tName) {
+        this.tName = tName;
+    }
 
-  public void setTState(long tState) {
-    this.tState = tState;
-  }
+    public Integer gettState() {
+        return tState;
+    }
 
+    public void settState(Integer tState) {
+        this.tState = tState;
+    }
 }

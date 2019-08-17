@@ -1,47 +1,72 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Brand {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Brand implements Serializable {
 
-  private long bId;         //主键
-  private String bName;   //品牌名
-  private long bState;    //品牌状态
-  private long country;   //区域外键
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "bId", type = IdType.AUTO)
+    private Integer bId;
 
-  public long getBId() {
-    return bId;
-  }
+    @TableField("bName")
+    private String bName;
 
-  public void setBId(long bId) {
-    this.bId = bId;
-  }
+    @TableField("bState")
+    private Integer bState;
 
+    private Integer country;
 
-  public String getBName() {
-    return bName;
-  }
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public void setBName(String bName) {
-    this.bName = bName;
-  }
+    public Integer getbId() {
+        return bId;
+    }
 
+    public void setbId(Integer bId) {
+        this.bId = bId;
+    }
 
-  public long getBState() {
-    return bState;
-  }
+    public String getbName() {
+        return bName;
+    }
 
-  public void setBState(long bState) {
-    this.bState = bState;
-  }
+    public void setbName(String bName) {
+        this.bName = bName;
+    }
 
+    public Integer getbState() {
+        return bState;
+    }
 
-  public long getCountry() {
-    return country;
-  }
+    public void setbState(Integer bState) {
+        this.bState = bState;
+    }
 
-  public void setCountry(long country) {
-    this.country = country;
-  }
+    public Integer getCountry() {
+        return country;
+    }
 
+    public void setCountry(Integer country) {
+        this.country = country;
+    }
 }

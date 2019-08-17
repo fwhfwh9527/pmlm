@@ -1,27 +1,36 @@
 package cn.bdqn.entity;
 
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Country {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Country implements Serializable {
 
-  private long id;
-  private String country;     //国家
+    private static final long serialVersionUID = 1L;
 
+    private String country;
 
-  public long getId() {
-    return id;
-  }
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public String getCountry() {
+        return country;
+    }
 
-
-  public String getCountry() {
-    return country;
-  }
-
-  public void setCountry(String country) {
-    this.country = country;
-  }
-
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }

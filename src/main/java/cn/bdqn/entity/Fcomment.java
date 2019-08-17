@@ -1,78 +1,107 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import java.time.LocalDate;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Fcomment {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Fcomment implements Serializable {
 
-  private long fcId;            //主键
-  private long uId;   //用户外键
-  private String fcContent;   //帖子评论内容
-  private java.sql.Date fcTime;   //回复时间
-  private  String fcimg;        //评论图片外键
-  private long fcNice;    //点赞数
-  private long fId;   //评论对应的帖子
-  private long fcfId;
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "fcId", type = IdType.AUTO)
+    private Integer fcId;
 
-  public long getFcId() {
-    return fcId;
-  }
+    @TableField("uId")
+    private Integer uId;
 
-  public void setFcId(long fcId) {
-    this.fcId = fcId;
-  }
+    @TableField("fcContent")
+    private String fcContent;
 
+    @TableField("fcTime")
+    private LocalDate fcTime;
 
-  public long getUId() {
-    return uId;
-  }
+    @TableField("fcNice")
+    private Integer fcNice;
 
-  public void setUId(long uId) {
-    this.uId = uId;
-  }
+    @TableField("fId")
+    private Integer fId;
 
+    @TableField("fcfId")
+    private Integer fcfId;
 
-  public String getFcContent() {
-    return fcContent;
-  }
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public void setFcContent(String fcContent) {
-    this.fcContent = fcContent;
-  }
+    public Integer getFcId() {
+        return fcId;
+    }
 
+    public void setFcId(Integer fcId) {
+        this.fcId = fcId;
+    }
 
-  public java.sql.Date getFcTime() {
-    return fcTime;
-  }
+    public Integer getuId() {
+        return uId;
+    }
 
-  public void setFcTime(java.sql.Date fcTime) {
-    this.fcTime = fcTime;
-  }
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
 
+    public String getFcContent() {
+        return fcContent;
+    }
 
-  public long getFcNice() {
-    return fcNice;
-  }
+    public void setFcContent(String fcContent) {
+        this.fcContent = fcContent;
+    }
 
-  public void setFcNice(long fcNice) {
-    this.fcNice = fcNice;
-  }
+    public LocalDate getFcTime() {
+        return fcTime;
+    }
 
+    public void setFcTime(LocalDate fcTime) {
+        this.fcTime = fcTime;
+    }
 
-  public long getFId() {
-    return fId;
-  }
+    public Integer getFcNice() {
+        return fcNice;
+    }
 
-  public void setFId(long fId) {
-    this.fId = fId;
-  }
+    public void setFcNice(Integer fcNice) {
+        this.fcNice = fcNice;
+    }
 
+    public Integer getfId() {
+        return fId;
+    }
 
-  public long getFcfId() {
-    return fcfId;
-  }
+    public void setfId(Integer fId) {
+        this.fId = fId;
+    }
 
-  public void setFcfId(long fcfId) {
-    this.fcfId = fcfId;
-  }
+    public Integer getFcfId() {
+        return fcfId;
+    }
 
+    public void setFcfId(Integer fcfId) {
+        this.fcfId = fcfId;
+    }
 }

@@ -1,97 +1,129 @@
 package cn.bdqn.entity;
 
+import java.math.BigDecimal;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Shop {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Shop implements Serializable {
 
-  private long sId;         //主键
-  private long bId;     //品牌外键
-  private long tId;     //口味外键
-  private String sName;     //商品名
-  private double sPrice;      //价格
-  private long sNumber;     //商品库存数
-  private String sIntroduce;      //商品描述
-  private long sState;      //商品状态
-  private long sNum;      //销量
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "sId", type = IdType.AUTO)
+    private Integer sId;
 
-  public long getSId() {
-    return sId;
-  }
+    @TableField("bId")
+    private Integer bId;
 
-  public void setSId(long sId) {
-    this.sId = sId;
-  }
+    @TableField("tId")
+    private Integer tId;
 
+    @TableField("sName")
+    private String sName;
 
-  public long getBId() {
-    return bId;
-  }
+    @TableField("sPrice")
+    private BigDecimal sPrice;
 
-  public void setBId(long bId) {
-    this.bId = bId;
-  }
+    @TableField("sNumber")
+    private Integer sNumber;
 
+    @TableField("sIntroduce")
+    private String sIntroduce;
 
-  public long getTId() {
-    return tId;
-  }
+    @TableField("sState")
+    private Integer sState;
 
-  public void setTId(long tId) {
-    this.tId = tId;
-  }
+    @TableField("sNum")
+    private Integer sNum;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public String getSName() {
-    return sName;
-  }
+    public Integer getsId() {
+        return sId;
+    }
 
-  public void setSName(String sName) {
-    this.sName = sName;
-  }
+    public void setsId(Integer sId) {
+        this.sId = sId;
+    }
 
+    public Integer getbId() {
+        return bId;
+    }
 
-  public double getSPrice() {
-    return sPrice;
-  }
+    public void setbId(Integer bId) {
+        this.bId = bId;
+    }
 
-  public void setSPrice(double sPrice) {
-    this.sPrice = sPrice;
-  }
+    public Integer gettId() {
+        return tId;
+    }
 
+    public void settId(Integer tId) {
+        this.tId = tId;
+    }
 
-  public long getSNumber() {
-    return sNumber;
-  }
+    public String getsName() {
+        return sName;
+    }
 
-  public void setSNumber(long sNumber) {
-    this.sNumber = sNumber;
-  }
+    public void setsName(String sName) {
+        this.sName = sName;
+    }
 
+    public BigDecimal getsPrice() {
+        return sPrice;
+    }
 
-  public String getSIntroduce() {
-    return sIntroduce;
-  }
+    public void setsPrice(BigDecimal sPrice) {
+        this.sPrice = sPrice;
+    }
 
-  public void setSIntroduce(String sIntroduce) {
-    this.sIntroduce = sIntroduce;
-  }
+    public Integer getsNumber() {
+        return sNumber;
+    }
 
+    public void setsNumber(Integer sNumber) {
+        this.sNumber = sNumber;
+    }
 
-  public long getSState() {
-    return sState;
-  }
+    public String getsIntroduce() {
+        return sIntroduce;
+    }
 
-  public void setSState(long sState) {
-    this.sState = sState;
-  }
+    public void setsIntroduce(String sIntroduce) {
+        this.sIntroduce = sIntroduce;
+    }
 
+    public Integer getsState() {
+        return sState;
+    }
 
-  public long getSNum() {
-    return sNum;
-  }
+    public void setsState(Integer sState) {
+        this.sState = sState;
+    }
 
-  public void setSNum(long sNum) {
-    this.sNum = sNum;
-  }
+    public Integer getsNum() {
+        return sNum;
+    }
 
+    public void setsNum(Integer sNum) {
+        this.sNum = sNum;
+    }
 }

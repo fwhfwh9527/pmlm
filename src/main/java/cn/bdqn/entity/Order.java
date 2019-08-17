@@ -1,57 +1,85 @@
 package cn.bdqn.entity;
 
+import java.math.BigDecimal;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Order {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Order implements Serializable {
 
-  private long oId;     //主键
-  private String oBh;     //订单编号
-  private long uId;     //用户id
-  private long aId;     //地址表id
-  private double oPrice;      //总价格
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "oId", type = IdType.AUTO)
+    private Integer oId;
 
-  public long getOId() {
-    return oId;
-  }
+    @TableField("oBh")
+    private String oBh;
 
-  public void setOId(long oId) {
-    this.oId = oId;
-  }
+    @TableField("uId")
+    private Integer uId;
 
+    @TableField("aId")
+    private Integer aId;
 
-  public String getOBh() {
-    return oBh;
-  }
+    @TableField("oPrice")
+    private BigDecimal oPrice;
 
-  public void setOBh(String oBh) {
-    this.oBh = oBh;
-  }
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getoId() {
+        return oId;
+    }
 
-  public long getUId() {
-    return uId;
-  }
+    public void setoId(Integer oId) {
+        this.oId = oId;
+    }
 
-  public void setUId(long uId) {
-    this.uId = uId;
-  }
+    public String getoBh() {
+        return oBh;
+    }
 
+    public void setoBh(String oBh) {
+        this.oBh = oBh;
+    }
 
-  public long getAId() {
-    return aId;
-  }
+    public Integer getuId() {
+        return uId;
+    }
 
-  public void setAId(long aId) {
-    this.aId = aId;
-  }
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
 
+    public Integer getaId() {
+        return aId;
+    }
 
-  public double getOPrice() {
-    return oPrice;
-  }
+    public void setaId(Integer aId) {
+        this.aId = aId;
+    }
 
-  public void setOPrice(double oPrice) {
-    this.oPrice = oPrice;
-  }
+    public BigDecimal getoPrice() {
+        return oPrice;
+    }
 
+    public void setoPrice(BigDecimal oPrice) {
+        this.oPrice = oPrice;
+    }
 }

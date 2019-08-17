@@ -1,57 +1,85 @@
 package cn.bdqn.entity;
 
+import java.math.BigDecimal;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Orderdetail {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Orderdetail implements Serializable {
 
-  private long pId;     //主键
-  private long oId;   //订单表id
-  private long sId;   //商品id
-  private long pNumber;   //购买商品数量
-  private double pPrice;    //商品价格
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "pId", type = IdType.AUTO)
+    private Integer pId;
 
-  public long getPId() {
-    return pId;
-  }
+    @TableField("oId")
+    private Integer oId;
 
-  public void setPId(long pId) {
-    this.pId = pId;
-  }
+    @TableField("sId")
+    private Integer sId;
 
+    @TableField("pNumber")
+    private Integer pNumber;
 
-  public long getOId() {
-    return oId;
-  }
+    @TableField("pPrice")
+    private BigDecimal pPrice;
 
-  public void setOId(long oId) {
-    this.oId = oId;
-  }
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getpId() {
+        return pId;
+    }
 
-  public long getSId() {
-    return sId;
-  }
+    public void setpId(Integer pId) {
+        this.pId = pId;
+    }
 
-  public void setSId(long sId) {
-    this.sId = sId;
-  }
+    public Integer getoId() {
+        return oId;
+    }
 
+    public void setoId(Integer oId) {
+        this.oId = oId;
+    }
 
-  public long getPNumber() {
-    return pNumber;
-  }
+    public Integer getsId() {
+        return sId;
+    }
 
-  public void setPNumber(long pNumber) {
-    this.pNumber = pNumber;
-  }
+    public void setsId(Integer sId) {
+        this.sId = sId;
+    }
 
+    public Integer getpNumber() {
+        return pNumber;
+    }
 
-  public double getPPrice() {
-    return pPrice;
-  }
+    public void setpNumber(Integer pNumber) {
+        this.pNumber = pNumber;
+    }
 
-  public void setPPrice(double pPrice) {
-    this.pPrice = pPrice;
-  }
+    public BigDecimal getpPrice() {
+        return pPrice;
+    }
 
+    public void setpPrice(BigDecimal pPrice) {
+        this.pPrice = pPrice;
+    }
 }

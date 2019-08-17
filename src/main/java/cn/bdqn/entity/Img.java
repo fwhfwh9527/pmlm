@@ -1,67 +1,104 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Img {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Img implements Serializable {
 
-  private long imgId;     //主键
-  private String img;   //图片
-  private long sId;   //商品外键
-  private long fId;   //用户外键
-  private long cId;   //帖子外键
-  private long fcId;    //回复外键
+    private static final long serialVersionUID = 1L;
 
+    @TableField("imgId")
+    private Integer imgId;
 
-  public long getImgId() {
-    return imgId;
-  }
+    private String img;
 
-  public void setImgId(long imgId) {
-    this.imgId = imgId;
-  }
+    /**
+     * 商品
+     */
+    @TableField("sId")
+    private Integer sId;
 
+    /**
+     * 帖子
+     */
+    @TableField("fId")
+    private Integer fId;
 
-  public String getImg() {
-    return img;
-  }
+    /**
+     * 商品评论
+     */
+    @TableField("cId")
+    private Integer cId;
 
-  public void setImg(String img) {
-    this.img = img;
-  }
+    /**
+     * 帖子评论
+     */
+    @TableField("fcId")
+    private Integer fcId;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public long getSId() {
-    return sId;
-  }
+    public Integer getImgId() {
+        return imgId;
+    }
 
-  public void setSId(long sId) {
-    this.sId = sId;
-  }
+    public void setImgId(Integer imgId) {
+        this.imgId = imgId;
+    }
 
+    public String getImg() {
+        return img;
+    }
 
-  public long getFId() {
-    return fId;
-  }
+    public void setImg(String img) {
+        this.img = img;
+    }
 
-  public void setFId(long fId) {
-    this.fId = fId;
-  }
+    public Integer getsId() {
+        return sId;
+    }
 
+    public void setsId(Integer sId) {
+        this.sId = sId;
+    }
 
-  public long getCId() {
-    return cId;
-  }
+    public Integer getfId() {
+        return fId;
+    }
 
-  public void setCId(long cId) {
-    this.cId = cId;
-  }
+    public void setfId(Integer fId) {
+        this.fId = fId;
+    }
 
+    public Integer getcId() {
+        return cId;
+    }
 
-  public long getFcId() {
-    return fcId;
-  }
+    public void setcId(Integer cId) {
+        this.cId = cId;
+    }
 
-  public void setFcId(long fcId) {
-    this.fcId = fcId;
-  }
+    public Integer getFcId() {
+        return fcId;
+    }
 
+    public void setFcId(Integer fcId) {
+        this.fcId = fcId;
+    }
 }

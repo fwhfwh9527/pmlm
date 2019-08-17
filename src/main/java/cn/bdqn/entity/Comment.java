@@ -1,57 +1,84 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import java.time.LocalDate;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Comment {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Comment implements Serializable {
 
-  private long cId;             //主键
-  private long sId;   //商品外键ID
-  private String comment;   //评论内容
-  private long uId;   //用户外键ID
-  private String cTime;    //评论时间
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "cId", type = IdType.AUTO)
+    private Integer cId;
 
-  public long getCId() {
-    return cId;
-  }
+    @TableField("sId")
+    private Integer sId;
 
-  public void setCId(long cId) {
-    this.cId = cId;
-  }
+    private String comment;
 
+    @TableField("uId")
+    private Integer uId;
 
-  public long getSId() {
-    return sId;
-  }
+    @TableField("cTime")
+    private LocalDate cTime;
 
-  public void setSId(long sId) {
-    this.sId = sId;
-  }
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public Integer getcId() {
+        return cId;
+    }
 
-  public String getComment() {
-    return comment;
-  }
+    public void setcId(Integer cId) {
+        this.cId = cId;
+    }
 
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
+    public Integer getsId() {
+        return sId;
+    }
 
+    public void setsId(Integer sId) {
+        this.sId = sId;
+    }
 
-  public long getUId() {
-    return uId;
-  }
+    public String getComment() {
+        return comment;
+    }
 
-  public void setUId(long uId) {
-    this.uId = uId;
-  }
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
+    public Integer getuId() {
+        return uId;
+    }
 
-  public String getCTime() {
-    return cTime;
-  }
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
 
-  public void setCTime(String cTime) {
-    this.cTime = cTime;
-  }
+    public LocalDate getcTime() {
+        return cTime;
+    }
 
+    public void setcTime(LocalDate cTime) {
+        this.cTime = cTime;
+    }
 }

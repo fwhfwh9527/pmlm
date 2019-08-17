@@ -1,67 +1,94 @@
 package cn.bdqn.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
-public class Address {
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author YangZhiJie
+ * @since 2019-08-12
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class Address implements Serializable {
 
-  private long aId;         //主键
-  private long uId;   //用户id
-  private String aName;   //收货人名字
-  private String aPhone;    //收货手机号
-  private String address;   //收货人地址
-  private long aState;    //地址状态
+    private static final long serialVersionUID = 1L;
 
+    @TableId(value = "aId", type = IdType.AUTO)
+    private Integer aId;
 
-  public long getAId() {
-    return aId;
-  }
+    @TableField("uId")
+    private Integer uId;
 
-  public void setAId(long aId) {
-    this.aId = aId;
-  }
+    @TableField("aName")
+    private String aName;
 
+    @TableField("aPhone")
+    private String aPhone;
 
-  public long getUId() {
-    return uId;
-  }
+    private String address;
 
-  public void setUId(long uId) {
-    this.uId = uId;
-  }
+    @TableField("aState")
+    private Integer aState;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
-  public String getAName() {
-    return aName;
-  }
+    public Integer getaId() {
+        return aId;
+    }
 
-  public void setAName(String aName) {
-    this.aName = aName;
-  }
+    public void setaId(Integer aId) {
+        this.aId = aId;
+    }
 
+    public Integer getuId() {
+        return uId;
+    }
 
-  public String getAPhone() {
-    return aPhone;
-  }
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
 
-  public void setAPhone(String aPhone) {
-    this.aPhone = aPhone;
-  }
+    public String getaName() {
+        return aName;
+    }
 
+    public void setaName(String aName) {
+        this.aName = aName;
+    }
 
-  public String getAddress() {
-    return address;
-  }
+    public String getaPhone() {
+        return aPhone;
+    }
 
-  public void setAddress(String address) {
-    this.address = address;
-  }
+    public void setaPhone(String aPhone) {
+        this.aPhone = aPhone;
+    }
 
+    public String getAddress() {
+        return address;
+    }
 
-  public long getAState() {
-    return aState;
-  }
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-  public void setAState(long aState) {
-    this.aState = aState;
-  }
+    public Integer getaState() {
+        return aState;
+    }
 
+    public void setaState(Integer aState) {
+        this.aState = aState;
+    }
 }
