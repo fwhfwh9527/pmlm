@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class controller {
 
-    //主页sa
+    //主页
     @RequestMapping("/index")
     public String index() {
         return "index";
